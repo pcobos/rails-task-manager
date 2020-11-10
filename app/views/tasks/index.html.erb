@@ -2,7 +2,7 @@
 
 <div class="task-card">
   <% @tasks.each do |task| %>
-    <p><%= link_to task.title, task_path %></p>
+    <p><%= link_to task.title, task_path(task) %></p>
     <h3><%= task.title %></h3>
   <% end %>
 </div>
