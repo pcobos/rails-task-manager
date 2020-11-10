@@ -13,7 +13,7 @@ class TasksController < ApplicationController
   
   def create
     # raise
-    @task = Task.new(params[:task_params])
+    @task = Task.new(task_params)
     @task.save!
     redirect_to root_path
   end
@@ -24,7 +24,7 @@ class TasksController < ApplicationController
   
   def update
     @task = Task.find(params[:id])
-    @task.update(params[:task_params])
+    @task.update(task_params)
   end
 
   private
